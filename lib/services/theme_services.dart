@@ -12,10 +12,16 @@ class ThemeServices{
 
   ThemeMode get theme =>_mode()?ThemeMode.dark: ThemeMode.light;
 
+   Icon get icon => _mode()?  Icon(Icons.dark_mode):  Icon(Icons.light_mode);
 
+
+
+
+  // ignore: non_constant_identifier_names
   void SwitchTheme(){
     Get.changeThemeMode(_mode()?ThemeMode.light:ThemeMode.dark);
     _saveData(!_mode());
+
   }
 
 }

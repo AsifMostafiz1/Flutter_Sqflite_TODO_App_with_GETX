@@ -17,17 +17,22 @@ class _HomePageState extends State<HomePage> {
           onTap: (){
             ThemeServices().SwitchTheme();
           },
-            child: const Icon(Icons.dark_mode_sharp)),
-
+            child: ThemeServices().icon,
+        ),
         actions: const [
           Icon(Icons.account_circle_outlined),
-          SizedBox(width: 20,)
+         SizedBox(width: 20,)
         ],
       ),
 
-      body: const Center(
-        child: Text("Hello Flutter"),
-      ),
+      body: Center(
+        child: TextButton(
+          onPressed: (){
+            ThemeServices().SwitchTheme();
+          },
+          child: const Text("Change Mode"),
+        ),
+      )
     );
   }
 }
