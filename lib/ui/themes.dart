@@ -3,10 +3,12 @@ import 'package:flutter/services.dart';
 
 class Themes{
   static final light = ThemeData(
-    primarySwatch: Colors.blue,
+    primaryColor: Colors.blue,
+
     appBarTheme: const AppBarTheme(
+      color: Colors.white,
       systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.blue,
+        statusBarColor: Colors.white,
             statusBarIconBrightness: Brightness.dark,
 
       ),
